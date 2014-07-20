@@ -8,7 +8,7 @@
 - (int)reward_amount {
 
  NSDictionary *sex = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/User/Library/Preferences/pwner.plist"]];
-return [[sex objectForKey:@"kNum"] intValue];
+return [[sex objectForKey:@"kNum"] intValue]; //Needs a new pref bundle
 
 }
 
@@ -24,7 +24,7 @@ return [[sex objectForKey:@"kNum"] intValue];
 - (int)currentServerBalanceForCurrency:(id)currency {
 
 NSDictionary *sex = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/User/Library/Preferences/pwner.plist"]];
-return [[sex objectForKey:@"kNum"] intValue];
+return [[sex objectForKey:@"kNum"] intValue]; //Needs a new pref bundle
 
 }
 
@@ -35,7 +35,7 @@ return [[sex objectForKey:@"kNum"] intValue];
 - (int)currentBalanceForCurrency:(id)currency {
 
 NSDictionary *sex = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/User/Library/Preferences/pwner.plist"]];
-return [[sex objectForKey:@"kNum"] intValue];
+return [[sex objectForKey:@"kNum"] intValue]; //Needs a new pref bundle
 
 }
 
