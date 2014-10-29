@@ -2,13 +2,14 @@
 
 #include <Foundation/Foundation.h>
 
+NSDictionary *sex = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/User/Library/Preferences/pwner.plist"]];
+int val = [[sex objectForKey:@"kNum"] intValue]; 
 
 %hook ADCV4VCCurrency
 
 - (int)reward_amount {
 
- NSDictionary *sex = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/User/Library/Preferences/pwner.plist"]];
-return [[sex objectForKey:@"kNum"] intValue]; //Needs a new pref bundle
+return val; //Needs a new pref bundle
 
 }
 
@@ -23,8 +24,7 @@ return [[sex objectForKey:@"kNum"] intValue]; //Needs a new pref bundle
 
 - (int)currentServerBalanceForCurrency:(id)currency {
 
-NSDictionary *sex = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/User/Library/Preferences/pwner.plist"]];
-return [[sex objectForKey:@"kNum"] intValue]; //Needs a new pref bundle
+return val; //Needs a new pref bundle
 
 }
 
@@ -34,8 +34,7 @@ return [[sex objectForKey:@"kNum"] intValue]; //Needs a new pref bundle
 
 - (int)currentBalanceForCurrency:(id)currency {
 
-NSDictionary *sex = [NSDictionary dictionaryWithContentsOfFile:[NSString stringWithFormat:@"/User/Library/Preferences/pwner.plist"]];
-return [[sex objectForKey:@"kNum"] intValue]; //Needs a new pref bundle
+return val; //Needs a new pref bundle
 
 }
 
